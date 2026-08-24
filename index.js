@@ -61,3 +61,44 @@ const handle_mousemove_event = (page, ele, hide = null) => {
     })
 }
 handle_mousemove_event(page1, video, dot);
+handle_mousemove_event(page2, dot, video);
+
+const say_hello = document.querySelector(".say_hello");
+const footer_email = document.querySelector(".footer_email");
+
+const add_text_to_dot_on_hover = (hover_ele, inner_text) => {
+    hover_ele.addEventListener("mousemove", ()=>{
+        dot.textContent = inner_text.toUpperCase();
+        dot.style.height = "auto";
+        dot.style.width = "auto";
+        dot.style.padding = "8px";
+        dot.style.color = "#E4E4E4";
+        dot.style.borderRadius = "10%";
+        dot.style.fontSize = "30px";
+        dot.style.transform = "rotate(-5deg)";
+        hover_ele.style.cursor = "pointer";
+    });
+    hover_ele.addEventListener("mouseleave", ()=>{
+        dot.textContent = "";
+        dot.style.height = "15px";
+        dot.style.width = "15px";
+        dot.style.padding = "0";
+        dot.style.color = "";
+        dot.style.borderRadius = "100%";
+        dot.style.fontSize = "0";
+        dot.style.transform = "";
+        hover_ele.style.cursor = "inherit";
+    });
+};
+add_text_to_dot_on_hover(playground_text, "Playground");
+add_text_to_dot_on_hover(card_1, "Matera")
+add_text_to_dot_on_hover(card_2, "Chance")
+add_text_to_dot_on_hover(card_3, "Silver")
+add_text_to_dot_on_hover(card_4, "Intramuros")
+add_text_to_dot_on_hover(footer_email, "Send Love")
+add_text_to_dot_on_hover(say_hello,"Let's Talk")
+
+// console.log(text_container2.children);
+// for (let child of text_container2.children) {
+//   console.log(child);
+// }
