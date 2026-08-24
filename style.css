@@ -66,3 +66,20 @@ header{
     /* font-size: 10px; */
     padding: 0 50px;
 }
+/* .left-header{
+    justify-self: flex-start;
+} */
+.header-child{
+    display: flex;
+    align-items: center;
+    /* justify-content:space-evenly ; */
+    gap: 150px;
+}
+.menu{
+    transition: all 2s ease;
+
+}
+/* nav{
+    margin-left: 400px;
+    margin-bottom: 10px;
+} */
