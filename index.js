@@ -8,6 +8,16 @@ const top_overlay = document.querySelector(".top-overlay");
 const page1 = document.querySelector(".page1");
 const video = document.querySelector(".mouse-pointer-video-container");
 
+const page2 = document.querySelector(".page2");
+const dot = document.querySelector(".mouse-pointer-dot");
+
+const playground_text = document.querySelector(".playground_text");
+const card_1 = document.getElementById("card-1");
+const card_2 = document.getElementById("card-2");
+const card_3 = document.getElementById("card-3");
+const card_4 = document.getElementById("card-4");
+
+
 // console.log(document.querySelectorAll(".playground_text"))
 
 let flag = false;
