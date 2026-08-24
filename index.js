@@ -174,3 +174,33 @@ cards.forEach(card => {
     });
 });
 
+const card_stack_animation = (container, card_array, interval_time = 1000) => {
+    let idx = 0, interval;
+    container.addEventListener("mouseenter", () =>{
+
+        interval = setInterval(() => {
+            card_array.forEach((card) => {
+                card.style.transform = "translate(0,0)";
+                card.style.opacity = 0;
+            });
+            card_array[idx].style.opacity = 1;
+            card_array[idx].style.transform = "translate(5px, -20px)";
+            if(++idx >= card_array.length) idx=0;
+        }, 700);
+
+    });
+    container.addEventListener("mouseleave",() => {
+        clearInterval(interval);
+        card_array.forEach(card => {
+            card.style.opacity = 0;
+            card_array[idx].style.transform = "translate(0,0)";
+        })
+    })
+}
+const detail_container = document.querySelector(".detail-container"); 
+const detail_container_card = document.querySelectorAll(".detail-container-card");
+card_stack_animation(detail_container, detail_container_card, 1000);
+
+const playground_container = document.querySelector(".playground-text-container");
+const playground_container_card = document.querySelectorAll(".playground-container-card");
+card_stack_animation(playground_container, playground_container_card, 1000);
