@@ -158,3 +158,41 @@ main{
     transition: all 0.1s ease;
     opacity: 0;
 }
+#detail-container-card1{
+    transform: translateY(-60px);
+    height: 45vh;
+    width: 30vh;
+    z-index: 3;
+}
+#detail-container-card2{
+    height: 30vh;
+    width: 40vh;
+    transform: translateX(-50px);
+    z-index: 2;
+}
+#detail-container-card3{
+    z-index: 1;
+    height: 40vh;
+    width: 20vh;
+    transform: translate(20px, -40px);
+}
+
+.detail-container-card img, .playground-container-card img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+.text-container h3{
+    font-size: xx-large;
+}
+.text-container p{
+    font-size: 5em;
+}
+.playground-container p{
+    font-size: 10em;
+}
+#playground-container-id{
+    justify-content: center;
+    font-weight: 900;
+}
