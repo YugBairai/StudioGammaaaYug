@@ -113,3 +113,48 @@ main{
     transform: translate(-1100px, -300px);
     z-index: 100;
 }
+.page2{
+    width: 100%;
+    position: relative;
+}
+.video-container{
+    height: 100vh;
+    width: 100%;
+    z-index: 100;
+    /* background-color: red; */
+}
+.iframe-overlay{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    /* visibility: hidden; */
+    opacity: 0;
+    z-index: 100;
+    /* background-color: red; */
+}
+.video-container iframe{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+.text-container, .playground-container{
+    height: 100vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    padding: 100px 250px;
+    gap: 20px;
+}
+.detail-container, .playground-text-container{
+    position: relative;
+    /* display: inline; */
+}
+.detail-container-card, .playground-container-card{
+    position: absolute;
+    border-radius: 20px;
+    transition: all 0.1s ease;
+    opacity: 0;
+}
