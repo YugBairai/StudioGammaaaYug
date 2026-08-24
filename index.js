@@ -102,3 +102,75 @@ add_text_to_dot_on_hover(say_hello,"Let's Talk")
 // for (let child of text_container2.children) {
 //   console.log(child);
 // }
+const text_container2 = document.querySelector(".text-container2");
+
+const text_hover_style = (text_container2_div) => {
+    // console.log(text_container2_div);
+
+    const [left, center, right] = text_container2_div.children;
+    // console.log(left);
+
+    center.addEventListener("mouseover", ()=>{
+
+        center.style.cursor = "normal";
+        left.style.opacity = "1";
+        right.style.opacity = "1";
+        
+        // console.log(left)
+        // const text_container2_divs = [...text_container2.children];
+        const filtered_divs = [...text_container2.children].filter(div => div !== text_container2_div);
+        
+        filtered_divs.forEach(div => {
+            // console.log(div);
+            let [ ,middle ] = div.children;
+            // console.log(middle)
+            middle.style.color = "#cbcaca";
+        })
+
+    });
+    
+    center.addEventListener("mouseleave", ()=>{
+
+        left.style.opacity = "0";
+        right.style.opacity = "0";
+        
+        // const text_container2_divs = [...text_container2.children];
+        const filtered_divs = [...text_container2.children].filter(div => div !== text_container2_div);
+        
+        filtered_divs.forEach(div => {
+            console.log(div);
+            let [ ,middle ] = div.children;
+            // console.log(middle)
+            middle.style.color = "inherit";
+        })
+
+    });
+}
+// console.log(text_container2.children)
+const text_container2_divs = [...text_container2.children]
+// console.log(text_container2_divs)
+text_container2_divs.forEach(text_container2_div => {
+    text_hover_style(text_container2_div);
+});
+
+
+const card = document.getElementsByClassName("card");
+const cards = [...card];
+cards.forEach(card => {
+    const video = card.firstElementChild;
+    // console.log(video)
+    card.addEventListener("mouseover", ()=>{
+        video.style.visibility = "visible";
+        video.style.opacity = "1";
+        card.style.backgroundColor = "rgba(0,0,0,0.4)";
+        card.style.backgroundBlendMode = "multiply";
+
+    });
+    card.addEventListener("mouseleave", ()=>{
+        video.style.visibility = "hidden";
+        video.style.opacity = "0";
+        card.style.backgroundColor = "";
+        card.style.backgroundBlendMode = "";
+    });
+});
+
