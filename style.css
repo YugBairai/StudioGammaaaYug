@@ -36,3 +36,33 @@ html, body {
     background-color: blue;
     z-index: 10000;
 }
+.page1{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.top-overlay{
+    position: absolute;
+    height: 0;
+    width: 100%;
+    background-color: white;
+    transform: rotate(-10deg);
+    transition: all 2s ease;
+    z-index: 50;
+    top: -150px;
+}
+header{
+    height: 10vh;
+    width: 100%;
+    /* background-color: blue; */
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1000;
+    transition: all 2s ease;
+    /* background-color: blue; */
+    font-size:large;
+    /* font-size: 10px; */
+    padding: 0 50px;
+}
